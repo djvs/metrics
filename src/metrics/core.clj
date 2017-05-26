@@ -4,8 +4,6 @@
   (:require
     [metrics.routefns :as rtfns]
     [ring.adapter.jetty :as ring]
-    [compojure.core :as compojure]
-    [compojure.route :as route]
     [compojure.handler :as handler]
     [clojure.data.json :as json]
     ))
