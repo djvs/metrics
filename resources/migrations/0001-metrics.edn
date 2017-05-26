@@ -1,0 +1,8 @@
+{ :up ["CREATE TABLE metrics(
+        id integer primary key autoincrement not null,
+        name varchar(256),
+        value text,
+        timestamp timestamp default current_timestamp not null
+      );"]
+ :down ["DROP TABLE metrics;"]
+}

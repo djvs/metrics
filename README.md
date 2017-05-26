@@ -1,36 +1,31 @@
 # metrics
 
-FIXME: description
+Metrics store API layer
 
 ## Installation
 
-Download from http://example.com/FIXME.
+You should just be able to delete db/mydb.sqlite3, and then run this in your `lein repl`:
+
+```
+
+(require '[ragtime.jdbc :as jdbc])
+(require '[ragtime.repl :as repl])
+
+(def config
+     {:datastore  (jdbc/sql-database {:connection-uri "jdbc:sqlite:db/mydb.sqlite3"})
+      :migrations (jdbc/load-resources "migrations")})
+
+(repl/migrate config)
+```
 
 ## Usage
 
-FIXME: explanation
+Spin up a quick instance with lein:
 
-    $ java -jar metrics-0.1.0-standalone.jar [args]
-
-## Options
-
-FIXME: listing of options this app accepts.
-
-## Examples
-
-...
-
-### Bugs
-
-...
-
-### Any Other Sections
-### That You Think
-### Might be Useful
+`lein run`
 
 ## License
 
-Copyright © 2017 FIXME
+Copyright © 2017 Dustin van Schouwen
 
-Distributed under the Eclipse Public License either version 1.0 or (at
-your option) any later version.
+Distributed under GPLv3

@@ -5,13 +5,27 @@
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [
                   [org.clojure/clojure "1.8.0"]
+
                   [compojure "1.6.0"]
-                  [korma "0.4.0"]
-                  [lobos "1.0.0-beta3"]
-                  [org.xerial/sqlite-jdbc "3.7.15-M1"]
+                  [korma "0.4.3"]
+                  [ring "1.6.0"]
+                  [ragtime "0.7.1"]
+
                   [org.clojure/data.json "0.2.6"]
-                  [ring "1.6.1"]
+                  [org.xerial/sqlite-jdbc "3.18.0"]
+                  [org.clojure/java.jdbc "0.7.0-alpha3"]
+
+                  ;; [org.xerial/sqlite-jdbc "3.18.0"]
+
+                  ;; [org.clojure/java.jdbc "0.6.1"]
+                  ;; [org.xerial/sqlite-jdbc "3.8.7"]
+
+                  ;; [org.xerial/sqlite-jdbc "3.8.11"]
+                  ;; [org.clojure/java.jdbc "0.5.5"]
+                  ;; [org.clojure/java.jdbc "0.7.0-alpha3"]
+
                   ;; [ring/ring-core "1.6.1"]
+                  ;; [lobos "1.0.0-beta3"]
                 ]
   :main ^:skip-aot metrics.core
   :target-path "target/%s"
