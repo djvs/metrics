@@ -8,10 +8,18 @@ Reads in HTTP parameters (more or less RESTful) and returns the raw JSON of the 
 
 ## Methods
 ```
-POST /metrics   # params 'name', 'value'.  Adds a timestamped metric to the DB with name and value.  Value assumed to be numeric (bigint).
-GET /metrics?begin_time=2017-05-20%2000:00:00&end_time=2017-05-31%2000:00:00&name=uptime    # Returns average of metric 'uptime' between May 20th and May 31st.
-GET /metrics?time=2017-05-20%2000:00:00&name=uptime # Returns latest value of metric 'uptime' at the beginning of May 20th.
-GET /metrics?name=uptime # Returns latest value of metric 'uptime' at present.
+# Adds a timestamped metric to the DB with name and value.  Value assumed to be numeric (bigint).
+POST /metrics   # body params "name", "value"
+
+# Returns average of metric 'uptime' between May 20th and May 31st.
+GET /metrics?begin_time=2017-05-20%2000:00:00&end_time=2017-05-31%2000:00:00&name=uptime    
+
+# Returns latest value of metric 'uptime' at the beginning of May 20th.
+GET /metrics?time=2017-05-20%2000:00:00&name=uptime 
+
+# Returns latest value of metric 'uptime' at present.
+GET /metrics?name=uptime 
+
 ```
 
 ## Installation
