@@ -27,6 +27,7 @@
                   ;; [ring/ring-core "1.6.1"]
                   ;; [lobos "1.0.0-beta3"]
                 ]
-  :main ^:skip-aot metrics.core
+  :main metrics.core
+  :aot [metrics.core]
   :target-path "target/%s"
   :profiles {:uberjar {:aot :all}})

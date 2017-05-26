@@ -15,10 +15,10 @@ POST /metrics   # body params "name", "value"
 GET /metrics?begin_time=2017-05-20%2000:00:00&end_time=2017-05-31%2000:00:00&name=uptime    
 
 # Returns latest value of metric 'uptime' at the beginning of May 20th.
-GET /metrics?time=2017-05-20%2000:00:00&name=uptime 
+GET /metrics?time=2017-05-20%2000:00:00&name=uptime
 
 # Returns latest value of metric 'uptime' at present.
-GET /metrics?name=uptime 
+GET /metrics?name=uptime
 
 ```
 
@@ -43,6 +43,14 @@ You should just be able to delete db/mydb.sqlite3, and then run this in your `le
 Spin up a quick instance with lein:
 
 `lein run`
+
+## Compiling to .jar
+
+```
+lein compile
+lein uberjar
+java -jar target/uberjar/metrics-0.1.0-SNAPSHOT-standalone.jar    
+```
 
 ## License
 

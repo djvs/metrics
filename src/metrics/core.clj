@@ -1,5 +1,5 @@
 (ns metrics.core
-  ;; (:gen-class :name metrics.core)
+  (:gen-class :name metrics.core)
   (:use compojure.core)
   (:require
     [metrics.routefns :as rtfns]
