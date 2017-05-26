@@ -10,6 +10,7 @@
                   [korma "0.4.3"]
                   [ring "1.6.0"]
                   [ragtime "0.7.1"]
+                  [http-kit "2.2.0"]
 
                   [org.clojure/data.json "0.2.6"]
                   [org.xerial/sqlite-jdbc "3.18.0"]

@@ -1,10 +1,12 @@
 (ns metrics.core
   (:gen-class :name metrics.core)
-  (:use compojure.core)
+  (:use compojure.core 
+        org.httpkit.server
+        [compojure.handler :only [site]]
+        )
   (:require
     [metrics.routefns :as rtfns]
     [ring.adapter.jetty :as ring]
-    [compojure.handler :as handler]
     [clojure.data.json :as json]
     ))
 
@@ -15,4 +17,4 @@
 )
 
 (defn -main []
-  (ring/run-jetty (handler/site main-routes) {:port 9000}))
+  (run-server (site #'main-routes) {:port 9000}))
